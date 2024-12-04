@@ -1,4 +1,6 @@
 const fs = require("node:fs");
+let fileNames = [];
 fs.readdir("./", (err, files) => {
-  console.log(files);
+  fileNames = files;
+  console.log(fileNames);
 });
