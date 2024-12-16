@@ -1,11 +1,12 @@
-getUser(1, function (user) {
-  console.log("user:", user);
+getUser(1, handleUserData);
 
-  //get repositories
-  getRepositories("user1", (data) => {
-    console.log(data.repo);
-  });
-});
+function handleUserData(user) {
+  console.log(user);
+  getRepositories("user1", handleRepo);
+}
+function handleRepo(data) {
+  console.log(data.repo);
+}
 
 //after 2 seconds will pass data to call back function
 //this simulates asynchronous behaviour
