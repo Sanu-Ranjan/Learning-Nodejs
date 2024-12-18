@@ -1,4 +1,5 @@
 const each = require("underscore/cjs/each.js");
+const result = require("./testModules/demo");
 let obj3 = { limit: 20 };
 let obj = { name: "john", age: 32, admin: true };
 each(
@@ -9,3 +10,5 @@ each(
   },
   obj3
 );
+
+console.log(result.result(3));
